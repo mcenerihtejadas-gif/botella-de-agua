@@ -1,0 +1,77 @@
+
+:root {
+    --color-fondo: #34b3ff;
+    --color-agua: #1d8cf8;
+    --borde-azul: #4a90e2;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+/* El vaso grande */
+.recipiente-grande {
+    width: 250px;
+    height: 380px;
+    background-color: white;
+    border: 4px solid var(--borde-azul);
+    border-radius: 10px 10px 80px 80px; /* Base redondeada */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.relleno-agua {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%; /* Controlado por JavaScript */
+    background-color: var(--color-agua);
+    transition: height 0.5s ease;
+}
+
+.texto-interior {
+    z-index: 10;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* Los vasos pequeños */
+.contenedor-vasos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.vaso-pequeno {
+    width: 60px;
+    height: 85px;
+    background-color: #f0f0f0;
+    border: 3px solid var(--borde-azul);
+    border-radius: 5px 5px 20px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.vaso-pequeno.lleno {
+    background-color: var(--color-agua);
+    color: rgba(255, 255, 255, 0.767);
+}
