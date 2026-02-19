@@ -15,14 +15,12 @@ body {
     margin: 0;
     padding: 20px;
 }
-
-/* El vaso grande */
 .recipiente-grande {
     width: 250px;
     height: 380px;
     background-color: white;
     border: 4px solid var(--borde-azul);
-    border-radius: 10px 10px 80px 80px; /* Base redondeada */
+    border-radius: 10px 10px 80px 80px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -35,7 +33,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 0%; /* Controlado por JavaScript */
+    height: 0%; 
     background-color: var(--color-agua);
     transition: height 0.5s ease;
 }
@@ -46,8 +44,6 @@ body {
     font-weight: bold;
     font-size: 1.4rem;
 }
-
-/* Los vasos pequeños */
 .contenedor-vasos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -74,4 +70,5 @@ body {
 .vaso-pequeno.lleno {
     background-color: var(--color-agua);
     color: rgba(255, 255, 255, 0.767);
+
 }
